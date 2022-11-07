@@ -147,7 +147,7 @@ function App() {
         </div>
         <p className="link-source">
           <a
-            href="https://github.com/HoncharenkoA/my-existing-progect"
+            href="https://github.com/HoncharenkoA/my-react-app"
             target="_blank"
             rel="noreferrer"
           >
