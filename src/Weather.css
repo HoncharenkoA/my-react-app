@@ -1,0 +1,122 @@
+.mainBlock {
+    font-family: 'Merriweather', serif;
+    border: 1px solid gray;
+    border-radius: 7px;
+    padding: 15px;
+    margin: 20px auto;
+    max-width: 800px;
+    margin-bottom: 0;
+}
+
+li {
+    list-style: none;
+    color: gray;
+    font-size: 11px;
+}
+
+.city-name {
+    color: rgb(55, 52, 62);
+}
+
+.description {
+    padding: 0;
+    text-transform: capitalize;
+}
+
+.location {
+    font-size: 13px;
+    font-weight: normal;
+    opacity: 50%;
+    margin-bottom: 10px;
+}
+
+.currentTime {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.currentDay {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.temp {
+    font-size: 40px;
+    color: rgb(55, 52, 62);
+}
+
+.position {
+    column-count: 5;
+}
+
+.unit {
+    position: relative;
+    top: -12px;
+}
+
+.weather-forecast-temperature-min {
+    font-size: 14px;
+    font-weight: bold;
+    opacity: 0.6;
+}
+
+.weather-forecast-temperature-max {
+    font-size: 14px;
+}
+
+.city {
+    text-decoration: underline;
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+}
+
+.definition {
+    color: gray;
+    font-size: 14px;
+    display: block;
+}
+
+.link-source {
+    font-family: 'Merriweather', serif;
+    font-size: 11px;
+    margin-top: 0;
+    text-align: center;
+}
+
+.active {
+    color: black;
+    cursor: default;
+    text-decoration: none;
+}
+
+.weather-forecast {
+    text-align: center;
+    border: 0.2px solid rgba(173, 168, 168, 0.711);
+    border-radius: 5px;
+    box-shadow: 7px 5px 5px rgba(167, 166, 166, 0.35);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.version-city {
+    text-align: center;
+}
+
+.secondary-weather-icon {
+    width: 60px;
+}
+
+.secondary-weather-name {
+    font-size: 15px;
+    opacity: 0.6;
+}
+
+.secondary-weather-des {
+    text-transform: capitalize;
+    font-size: 12px;
+    opacity: 0.6;
+}
+
+.secondary-weather-temp {
+    font-size: 15px;
+}
