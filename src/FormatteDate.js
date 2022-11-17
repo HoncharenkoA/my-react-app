@@ -23,7 +23,10 @@ export default function FormatteDate(props) {
   }
   return (
     <div>
-      {day} {hours}:{minutes}
+      {day}
+      <div>
+        {hours}:{minutes}
+      </div>
     </div>
   );
 }
