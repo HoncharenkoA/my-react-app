@@ -25,13 +25,6 @@ li {
     font-size: 15px;
     font-weight: bold;
 }
-
-.location {
-    font-size: 13px;
-    font-weight: normal;
-    opacity: 50%;
-    margin-bottom: 10px;
-}
 .weather-forecast {
     text-align: center;
     border: 0.2px solid rgba(173, 168, 168, 0.711);
@@ -39,27 +32,4 @@ li {
     box-shadow: 7px 5px 5px rgba(167, 166, 166, 0.35);
     padding-top: 10px;
     padding-bottom: 10px;
-}
-
-.version-city {
-    text-align: center;
-}
-
-.secondary-weather-icon {
-    width: 60px;
-}
-
-.secondary-weather-name {
-    font-size: 15px;
-    opacity: 0.6;
-}
-
-.secondary-weather-des {
-    text-transform: capitalize;
-    font-size: 12px;
-    opacity: 0.6;
-}
-
-.secondary-weather-temp {
-    font-size: 15px;
 }

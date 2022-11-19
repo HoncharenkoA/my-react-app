@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
 import WeatherInfo from "./WeatherInfo";
+import WeatherIcon from "./WeatherIcon";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -20,6 +21,12 @@ export default function Weather(props) {
       city: response.data.name,
     });
   }
+  function clickedCity(event, cityName) {
+    event.preventDefault();
+    const apiKey = "da16704800751c14adceb19bcac00e36";
+    let cityApi = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`;
+    axios.get(cityApi).then(handleResponse);
+  }
   function handleSubmit(event) {
     event.preventDefault();
     search();
@@ -31,6 +38,17 @@ export default function Weather(props) {
     const apiKey = "da16704800751c14adceb19bcac00e36";
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
+  }
+  function showPosition(position) {
+    console.log(position);
+    let latitude = position.coords.latitude;
+    let longitude = position.coords.longitude;
+    const apiKey = "da16704800751c14adceb19bcac00e36";
+    let geoUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+    axios.get(geoUrl).then(handleResponse);
+  }
+  function fetchLocation() {
+    navigator.geolocation.getCurrentPosition(showPosition);
   }
   if (weatherData.ready) {
     return (
@@ -58,7 +76,79 @@ export default function Weather(props) {
             </div>
           </form>
         </div>
+        <div className="location">
+          <a href="/" className="location" onClick={fetchLocation}>
+            My location📍
+          </a>
+        </div>
         <WeatherInfo data={weatherData} />
+        <hr />
+        <div className="version-city">
+          <div className="row">
+            <div className="d-flex justify-content-center">
+              <div className="col-md-2 d-flex flex-column align-items-center">
+                <a
+                  href="/"
+                  className="js-city secondary-weather-name"
+                  data-city-name="London"
+                  onClick={(event) => {
+                    clickedCity(event, "London");
+                  }}
+                >
+                  London
+                </a>
+              </div>
+              <div className="col-md-2 d-flex flex-column align-items-center">
+                <a
+                  href="/"
+                  className="js-city secondary-weather-name"
+                  data-city-name="Tokyo"
+                  onClick={(event) => {
+                    clickedCity(event, "Tokyo");
+                  }}
+                >
+                  Tokyo
+                </a>
+              </div>
+              <div className="col-md-2 d-flex flex-column align-items-center">
+                <a
+                  href="/"
+                  className="js-city secondary-weather-name"
+                  data-city-name="Sydney"
+                  onClick={(event) => {
+                    clickedCity(event, "Sydney");
+                  }}
+                >
+                  Sydney
+                </a>
+              </div>
+              <div className="col-md-2 d-flex flex-column align-items-center">
+                <a
+                  href="/"
+                  className="js-city secondary-weather-name"
+                  data-city-name="Lviv"
+                  onClick={(event) => {
+                    clickedCity(event, "Lviv");
+                  }}
+                >
+                  Lviv
+                </a>
+              </div>
+              <div className="col-md-2 d-flex flex-column align-items-center">
+                <a
+                  href="/"
+                  className="js-city secondary-weather-name"
+                  data-city-name="Paris"
+                  onClick={(event) => {
+                    clickedCity(event, "Paris");
+                  }}
+                >
+                  Paris
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     );
   } else {

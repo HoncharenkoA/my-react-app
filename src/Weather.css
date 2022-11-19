@@ -12,8 +12,6 @@
     color: rgb(55, 52, 62);
 }
 
-
-
 .temp {
     font-size: 40px;
     color: rgb(55, 52, 62);
@@ -61,4 +59,18 @@
     color: black;
     cursor: default;
     text-decoration: none;
+}
+.location {
+    font-size: 14px;
+    text-decoration: none;
+    margin-bottom: 5px;
+    color: rgb(1, 77, 93);
+}
+.version-city {
+    text-align: center;
+
+}
+.secondary-weather-name {
+    font-size: 20px;
+    color: #085ED6;
 }

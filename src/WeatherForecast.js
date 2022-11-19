@@ -10,12 +10,11 @@ export default function WeatherForecast(props) {
   function handleResponse(response) {
     setForecast(response.data.daily);
     setLoaded(true);
-    console.log(response);
   }
   useEffect(() => {
     setLoaded(false);
   }, [props.coordinates]);
-
+    
   if (loaded) {
     return (
       <div className="WeatherForeacast">
