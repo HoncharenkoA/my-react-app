@@ -15,6 +15,14 @@ function App() {
             Open-source code
           </a>
           <span> by Anastasiia Honcharenko</span>
+          and{" "}
+          <a
+            href="https://my-amazing-react-app.netlify.app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            hosted on Netlify
+          </a>
         </p>
       </div>
     </div>

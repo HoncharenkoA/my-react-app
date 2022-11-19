@@ -34,7 +34,7 @@ export default function WeatherInfo(props) {
         <div className="col-md-7">
           <div className="position d-flex justify-content-center"></div>
           <div className="weather-forecast">
-            <WeatherForecast />
+            <WeatherForecast coordinates={props.data.coordinates} />
           </div>
         </div>
         <hr />
